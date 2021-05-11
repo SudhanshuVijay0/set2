@@ -23,7 +23,7 @@ X[:, 2:3]= imputer.transform(X[:, 2:3])
 # Taking care of missing data
 #handling missing data (Replacing missing data with the mean value)  
 from sklearn.impute import SimpleImputer
-imputer = SimpleImputer(missing_values= np.NAN, strategy= 'constant', fill_value='Female', verbose=1, copy=True)
+imputer = SimpleImputer(missing_values= np.NAN, strategy= 'constant', fill_value='France', verbose=1, copy=True)
 #Fitting imputer object to the independent variables x.   
 imputer = imputer.fit(X[:, 3:4])
 #Replacing missing data with the calculated mean value  
@@ -41,7 +41,7 @@ X[:, 4:7]= imputer.transform(X[:, 4:7])
 # Taking care of missing data
 #handling missing data (Replacing missing data with the mean value)  
 from sklearn.impute import SimpleImputer
-imputer = SimpleImputer(missing_values= np.NAN, strategy= 'most_frequent', fill_value='none', verbose=1, copy=True)
+imputer = SimpleImputer(missing_values= np.NAN, strategy= 'most_frequent', fill_value=None, verbose=1, copy=True)
 #Fitting imputer object to the independent variables x.   
 imputer = imputer.fit(X[:, 7:9])
 #Replacing missing data with the calculated mean value  
@@ -54,7 +54,7 @@ imputer = SimpleImputer(missing_values= np.NAN, strategy= 'mean', fill_value=Non
 #Fitting imputer object to the independent variables x.   
 imputer = imputer.fit(X[:, 9:10])
 #Replacing missing data with the calculated mean value  
-X[:, 9:10]= imputer.transform(X[:, 9:10])  
+X[:, 9:10]= imputer.transform(X[:, 9:10])
 
 # Encoding Categorical data:
 # Encoding the Independent Variable
