@@ -28,7 +28,7 @@ imputer = SimpleImputer(missing_values= np.NAN, strategy= 'mean', fill_value=Non
 #Fitting imputer object to the independent variables x.   
 imputer = imputer.fit(X[:, 3:9])
 #Replacing missing data with the calculated mean value  
-X[:, 3:6]= imputer.transform(X[:, 3:9])
+X[:, 3:9]= imputer.transform(X[:, 3:9])
 
 
   
